@@ -1,0 +1,15 @@
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\bin\Debug\QuizApp.exe.config
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\bin\Debug\QuizApp.exe
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\bin\Debug\QuizApp.pdb
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.csprojAssemblyReference.cache
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.CategoryForm.resources
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.Form1.resources
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.Properties.Resources.resources
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.SignUp.resources
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.csproj.GenerateResource.cache
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.csproj.CoreCompileInputs.cache
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.exe
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.pdb
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.AdminPanel.resources
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.AttemptQuiz.resources
+C:\Users\SYED ABDUL BASIT\source\repos\QuizApp\QuizApp\obj\Debug\QuizApp.Result.resources

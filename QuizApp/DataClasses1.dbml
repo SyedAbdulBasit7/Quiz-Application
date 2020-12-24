@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Quiz" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BASIT\SQLEXPRESS;Initial Catalog=Quiz;Integrated Security=True" SettingsObjectName="QuizApp.Properties.Settings" SettingsPropertyName="QuizConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="User_result" Member="results" ThisKey="user_id" OtherKey="user_id" Type="result" />
+    </Type>
+  </Table>
+  <Table Name="dbo.quiz_category" Member="quiz_categories">
+    <Type Name="quiz_category">
+      <Column Name="category_id" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="category_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="quiz_category_quiz_question" Member="quiz_questions" ThisKey="category_id" OtherKey="category_id" Type="quiz_question" />
+      <Association Name="quiz_category_result" Member="results" ThisKey="category_id" OtherKey="category_id" Type="result" />
+    </Type>
+  </Table>
+  <Table Name="dbo.quiz_question" Member="quiz_questions">
+    <Type Name="quiz_question">
+      <Column Name="question_id" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="question" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="choices" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="answer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="category_id" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="quiz_question_quiz_question" Member="quiz_question2" ThisKey="question_id" OtherKey="question_id" Type="quiz_question" Cardinality="One" />
+      <Association Name="quiz_category_quiz_question" Member="quiz_category" ThisKey="category_id" OtherKey="category_id" Type="quiz_category" IsForeignKey="true" />
+      <Association Name="quiz_question_quiz_question" Member="quiz_question1" ThisKey="question_id" OtherKey="question_id" Type="quiz_question" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.result" Member="results">
+    <Type Name="result">
+      <Column Name="result_id" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="category_id" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="quiz_category_result" Member="quiz_category" ThisKey="category_id" OtherKey="category_id" Type="quiz_category" IsForeignKey="true" />
+      <Association Name="User_result" Member="User" ThisKey="user_id" OtherKey="user_id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
